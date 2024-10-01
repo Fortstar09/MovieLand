@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import search from "./assets/search.svg";
 import MovieCard from "./MovieCard";
+import Modal from "./Modal";
 
 const API_URL = "https://www.omdbapi.com/?apikey=dad4d177";
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+      <Modal />
       <div className="app">
         <h1>MovieSearch</h1>
 

@@ -3,9 +3,15 @@ import { useState } from "react";
 const Modal = () => {
   const [modal, setModal] = useState(true);
 
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+  // useEffect(() => {
+  //   const data = window.localStorage.getItem("modalstate");
+  //   console.log("data", data);
+  //   if (data !== null) setModal(JSON.parse(data));
+  // }, []);
+
+  // useEffect(() => {
+  //   window.localStorage.setItem("modalstate", modal);
+  // }, [modal]);gi
 
   return (
     <>
@@ -18,7 +24,10 @@ const Modal = () => {
               <img
                 src="icon.svg"
                 alt="icon"
-                onClick={toggleModal}
+                onClick={() => {
+                  setModal(false);
+                  console.log(modal);
+                }}
                 className="close-button"
               />
             </div>
